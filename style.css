@@ -2,8 +2,8 @@ html {
   box-sizing: border-box;
 }
 * {
-  font-family: inter;
-  font-style: normal;
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+  font-family: 'Inter', sans-serif;
 }
 *:before,
 *:after {
@@ -47,7 +47,7 @@ body {
 }
 .login a {
   font-weight: 500;
-  width: 43px;
+  width: 45px;
   height: 21px;
   line-height: 150%;
 }
@@ -61,7 +61,7 @@ body {
 }
 
 .navElement1 a {
-  width: 73px;
+  width: 75px;
   height: 24px;
   font-size: 16px;
 }
@@ -117,7 +117,7 @@ header {
   display: flex;
   flex-direction: column;
   padding: 96px 0px 96px 0px;
-  background-color: #111928; 
+  background-color: #111928;
 }
 .header {
   display: flex;
@@ -216,18 +216,13 @@ header button {
   color: gray/400;
 }
 
-
-
 /* social prof */
-
-
-
 
 .containerSc {
   display: flex;
   flex-direction: column;
   /* height: 213px; */
-  padding:  96px, 0px;
+  padding: 96px, 0px;
   border: 1px, 0px, 1px, 0px;
   gap: 64px;
 }
@@ -236,7 +231,7 @@ header button {
 
   flex-direction: column;
   align-items: center;
-  padding:0px 0px 96px ;
+  padding: 0px 0px 96px;
   gap: 48px;
 }
 
@@ -282,11 +277,6 @@ header button {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
-        
-
-
-
-
 
 /* Climat */
 
@@ -364,11 +354,7 @@ header button {
   font-weight: 400;
 }
 
-
-
 /* Donors */
-
-
 
 .containerDonors {
   display: flex;
@@ -456,7 +442,7 @@ header button {
   gap: 8px;
   border-radius: 8px;
   border: 1px solid #4b5563;
-  background-color:  #374151;
+  background-color: #374151;
 }
 
 #stripe {
@@ -496,11 +482,7 @@ header button {
   height: 48px;
 }
 
-
-
 /* Events */
-
-
 
 .containerEvents {
   display: flex;
@@ -514,7 +496,7 @@ header button {
   align-items: center;
   gap: 32px;
 }
-.heading > .title{
+.heading > .title {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -524,131 +506,118 @@ header button {
   color: white;
   gap: 16px;
 }
-.title > .article{
-  color: #9CA3AF;
+.title > .article {
+  color: #9ca3af;
   font-size: 20px;
   font-weight: 400;
   width: 640px;
 }
 
 .cards1 {
-  
   display: flex;
   justify-content: space-evenly;
-align-items: flex-start;
-gap: 48px;
-align-self: stretch;
+  align-items: flex-start;
+  gap: 48px;
+  align-self: stretch;
 }
 
-.card1{
+.card1 {
   display: flex;
-padding: 32px;
-flex-direction: column;
-gap: 16px;
-flex: 1 0 0;
-
+  padding: 32px;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 0 0;
 }
-.visitors{
+.visitors {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   justify-content: space-between;
-} 
-
-
-.progres{
-  display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 4px;
-align-self: stretch;
-position: relative;
 }
 
-.progres :nth-child(3){
+.progres {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
   position: relative;
-  bottom:  13px;
+}
+
+.progres :nth-child(3) {
+  position: relative;
+  bottom: 13px;
   width: 441px;
 }
 
-.sum{
+.sum {
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
 }
-.sumLeft{
+.sumLeft {
   display: flex;
-align-items: center;
-gap: 8px;
-font-size: 18px;
-font-weight: 700;
-color: white;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
 }
-.sumCenter{
+.sumCenter {
   font-size: 14px;
   font-weight: 400;
-  color:#9CA3AF ;
+  color: #9ca3af;
 }
-.sumRight{
+.sumRight {
   font-size: 14px;
   font-weight: 400;
-  color:#9CA3AF ;
+  color: #9ca3af;
 }
-.buttonCard{
+.buttonCard {
   display: flex;
-align-items: center;
-align-self: flex-start;
-gap: 16px;
-
+  align-items: center;
+  align-self: flex-start;
+  gap: 16px;
 }
 .titleCard,
-.articleCard{
+.articleCard {
   width: 512px;
 }
-#progres3{
+#progres3 {
   width: 276px;
 }
-.donate{
-  display: flex;
-padding: 10px 20px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-border-radius: 8px;
-background: var(--primary-600, #1C64F2);
-color: white;
-}
-.card1 > .buttonCard > :nth-child(2){
+.donate {
   display: flex;
   padding: 10px 20px;
   justify-content: center;
   align-items: center;
   gap: 8px;
   border-radius: 8px;
-  border: 1px solid  #4B5563;
-  background: #1F2A37;
-  color: #9CA3AF;
+  background: var(--primary-600, #1c64f2);
+  color: white;
+}
+.card1 > .buttonCard > :nth-child(2) {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #4b5563;
+  background: #1f2a37;
+  color: #9ca3af;
 }
 
-.footerEvent a{
+.footerEvent a {
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-
-
-
-
-
-
 /* News */
-
-
-
 
 .containerNews {
   display: flex;
@@ -658,50 +627,46 @@ color: white;
   align-items: center;
   gap: 64px;
 }
-.heading3{
+.heading3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   width: 40%;
-
 }
-.heading3 > .title{
+.heading3 > .title {
   display: flex;
   font-size: 36px;
   font-weight: 800;
   color: white;
 }
-.heading3> .article{
+.heading3 > .article {
   font-weight: 400;
   font-size: 20px;
-  color:#9CA3AF ;
-  
+  color: #9ca3af;
 }
-.column{
+.column {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
 }
 
-
-.newsItemContent{
+.newsItemContent {
   display: flex;
-  
-  align-items:flex-start;
+
+  align-items: flex-start;
   gap: 32px;
-  
 }
 
 .newsItemContent .article .title,
-.newsItemContent  .title{
+.newsItemContent .title {
   font-size: 24px;
   font-weight: 700;
   color: white;
 }
 .column > .article,
-.column > .article :nth-child(2){
+.column > .article :nth-child(2) {
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -710,97 +675,79 @@ color: white;
   gap: 16px;
 }
 .newsSeparator,
-.newsSeparator > img{
- 
+.newsSeparator > img {
   width: 1.6px;
 }
-.containerNews p{
-margin: 0px;
+.containerNews p {
+  margin: 0px;
 }
-.containerNews a{
+.containerNews a {
   display: flex;
   align-items: center;
   gap: 6px;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-
 }
-
-
-
-
 
 /* Contact */
 
-
-
-
-
-.contact{
+.contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 64px;
 }
-.formContact{
+.formContact {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   width: 80%;
 }
-.formContact .title{
+.formContact .title {
   font-size: 36px;
   font-weight: 800;
   color: white;
 }
 
-.formContact .article{
+.formContact .article {
   font-size: 20px;
   font-weight: 400;
-  color: #9CA3AF;
+  color: #9ca3af;
 }
 
-
-form{
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 24px 0px 24px 0px;
   /* width: 100%; */
   gap: 32px;
- 
-
 }
-.formRow{
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  gap: 32px;
-  align-self: stretch;
- 
-}
-.inputRow input{
+.formRow {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
-
-} 
-.email{
-display: flex;
-flex-direction: column;
-gap: 8px;
-
+  align-self: stretch;
 }
-.email :nth-child(1){
+.inputRow input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.email {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.email :nth-child(1) {
   color: white;
 }
 
-
-
-#email{
+#email {
   display: flex;
   padding: 14px 16px;
   gap: 10px;
@@ -811,7 +758,7 @@ gap: 8px;
   font-size: 16px;
 }
 
-#subject{
+#subject {
   display: flex;
   padding: 14px 16px;
   gap: 10px;
@@ -821,7 +768,7 @@ gap: 8px;
   background-color: #374151;
   font-size: 16px;
 }
-#message{
+#message {
   display: flex;
   padding: 14px 16px;
   gap: 10px;
@@ -833,26 +780,18 @@ gap: 8px;
   /* width: 70%; */
 }
 
-
-#submit{
+#submit {
   display: flex;
   justify-content: center;
-  
+
   gap: 8px;
   border-radius: 8px;
   padding: 10px 20px;
-  background-color: #1C64F2;
- color: white;
- font-size: 14px;
- font-weight: 500;
- 
+  background-color: #1c64f2;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
 }
-
-
-
-
-
-
 
 .containerFooter {
   background-color: #374151;
@@ -867,7 +806,7 @@ gap: 8px;
   align-items: flex-start;
 }
 .navElement > a,
-.navLink > div >  a {
+.navLink > div > a {
   text-decoration: none;
 }
 
@@ -905,12 +844,11 @@ footer {
   gap: 20px;
   color: white;
 }
-.links{
+.links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  
 }
 
 .socialLinks {
@@ -922,7 +860,5 @@ footer {
 }
 .containerFooter a {
   text-decoration: none;
-  color: #9CA3AF;
+  color: #9ca3af;
 }
-
-  
