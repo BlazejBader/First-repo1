@@ -35,21 +35,25 @@ header,
 
 
 .containerNav {
+
   max-width: 1920px;
   margin: 0px auto;
   background-color: #111928;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 65px;
-  gap: 64px;
+  /* gap: 64px; */
   position: sticky;
   top: 0px;
+ 
 }
 .nav {
   display: flex;
   align-items: center;
   width: 100%;
   gap: 32px;
+  padding-left: 64px;
 }
 .navImg > img {
   width: 58px;
@@ -881,4 +885,288 @@ footer {
 .containerFooter a {
   text-decoration: none;
   color: #9ca3af;
+}
+
+#nav{
+  display: none;
+}
+
+
+
+@media  (max-width: 480px){
+  #nav{
+    display: initial;
+    width: 33px;
+    height: 33px;
+  }
+.container,
+.container1{
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+.nav,
+.login{
+  display: none;
+}
+.containerNav{
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 16px 0px 16px ;
+  position: fixed;
+  width:90%;
+  top: 0 px;
+  height: 33px;
+
+  
+}
+header{
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px;
+  padding: 50px 16px  0px 16px;
+  gap: 16px;
+}
+ .sectionLeft{ 
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  max-width: 100%;
+  gap: 16px;
+ }
+ .titleDescH{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+ }
+ .titleH{
+  display: flex;
+  font-size: 30px;
+  font-weight: 800;
+ }
+ .titleA{
+  font-size: 16px;
+  font-weight: 400;
+ }
+ .button{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+ }
+.donateNow{
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#learnMore{
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+ color: #9CA3AF;
+
+}
+.sectionLeft hr,
+.sectionLeft > p{
+  display: none;
+}
+.sponsors{
+  display: flex;
+  gap: 16px;
+}
+#intel{
+  width: 57.33px;
+height: 22.24px;
+top: 4.67px;
+left: 0.96px;
+
+}
+#fedex{
+  width: 74.67px;
+  height: 32px;
+  padding: 5.33px, 0px, 5.96px, 0px;
+  
+}
+#visa{
+  width: 58.67px;
+  height: 32px;
+  padding: 6.67px, 0.33px, 6.67px, 0px;
+  
+}
+#disney{
+  width: 70.67px;
+  height: 32px;
+  
+}
+.sectionRight{
+  max-width: 100%;
+}
+.sectionRight > img{
+  max-width: 100%;
+  width: 100%;
+}
+.containerSc{
+ padding: 0px 16px 32px 16px;
+ padding-left: 16px;
+}
+.socialProf{
+  padding: 0px 0px 0px 0px;
+}
+.socialProf1{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  padding: 0px 0px 0px 0px;
+  gap: 32px;
+  
+  width: 100%;
+}
+.boxSocial,
+.boxSocial1{
+  border: none;
+  width: 100%;
+}
+
+.containerC{
+  padding: 1px 16px 32px 16px;
+}
+.row{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 0px;
+}
+.row > div > img{
+  display: none;
+}
+.imgClimat{
+  display: none;
+}
+.climate{
+  display: flex;
+  gap: 32px;
+}
+.headingClimat{
+  display: flex;
+  gap: 24px;
+}
+.titleClimat{
+  font-size: 30px;
+  font-weight: 800;
+}
+.button{
+  font-size: 14px;
+}
+#learnMore2{
+  color: #9CA3AF;
+  background-color: #1F2A37;
+  border: 1px solid var(--gray-600, #4B5563);
+}
+.containerDonors{
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+  gap: 16px; 
+  max-width: 460px;
+}
+.heading{
+  display: flex;
+  gap: 16px;
+}
+.articleHd2{
+  width: 100%;
+}
+.cards{
+  display: flex;
+  flex-direction: column;
+  
+  gap: 0px;
+}
+.row1{
+  display: flex;
+  flex-wrap: wrap;
+  
+  
+  gap: auto;
+  align-items:center;
+}
+.boxD2{
+  padding-bottom: 16px;
+}
+.containerEvents{
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+  margin: 0px 0px;
+  width: 100%;
+}
+.events{
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  width: 100%;
+}
+.heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+.article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 380px;
+}
+.cards1{
+  display: flex;
+  flex-direction: column;
+  
+  gap: 16px
+}
+.card1{
+  padding:0px 0px ;
+  width: 97%;
+
+}
+.card1 img{
+  width: 100%;
+  max-width: 96%;
+}
+#progres3{
+  width:46% ;
+}
+.sum,
+.visitors,
+.articleCard,
+.titleCard{
+  width: 100%;
+  max-width: 97%;
+}
+.titleCard{
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+.articleCard{
+  font-size: 16px;
+  font-weight: 400;
+  color: #9CA3AF;
+}
+
+
 }
