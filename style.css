@@ -1,11 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
 html {
   box-sizing: border-box;
   background-color: var(--gray-900, #111928);
-  background-color: var(--gray-700, #1F2A37);
+  background-color: var(--gray-700, #1f2a37);
 }
 * {
-  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 *:before,
 *:after {
@@ -18,24 +19,22 @@ header,
 .containerSc,
 .containerC,
 .containerEvents,
-.containerNews{
-   max-width: 1920px;
-   min-width: 320px;
-   padding: 0px 80px;
-   margin: 0px auto;
+.containerNews {
+  max-width: 1920px;
+  min-width: 320px;
+  padding: 0px 80px;
+  margin: 0px auto;
 }
-.container{
+.container {
   background: var(--gray-900, #111928);
   padding: 0px 80px;
 }
-.container1{
+.container1 {
   background-color: var(--gray-800, #374151);
   padding: 0px 80px;
 }
 
-
 .containerNav {
-
   max-width: 1920px;
   margin: 0px auto;
   background-color: #111928;
@@ -46,7 +45,6 @@ header,
   /* gap: 64px; */
   position: sticky;
   top: 0px;
- 
 }
 .nav {
   display: flex;
@@ -386,8 +384,8 @@ header button {
   justify-content: center;
   padding: 96px 0px 96px 0px;
   border: 1px 0px 1px 0px;
-  gap: 64px; 
-  background-color:#374151;
+  gap: 64px;
+  background-color: #374151;
 }
 .headingD2 {
   display: flex;
@@ -887,286 +885,345 @@ footer {
   color: #9ca3af;
 }
 
-#nav{
+#nav {
   display: none;
 }
 
-
-
-@media  (max-width: 480px){
-  #nav{
+@media (max-width: 480px) {
+  #nav {
     display: initial;
     width: 33px;
     height: 33px;
   }
-.container,
-.container1{
-  padding: 0px 0px;
-  margin: 0px 0px;
-}
-.nav,
-.login{
-  display: none;
-}
-.containerNav{
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 16px 0px 16px ;
-  position: fixed;
-  width:90%;
-  top: 0 px;
-  height: 33px;
+  .container,
+  .container1 {
+    padding: 0px 0px;
+    margin: 0px 0px;
+  }
+  .nav,
+  .login {
+    display: none;
+  }
+  .containerNav {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 16px 0px 16px;
+    position: fixed;
+    width: 90%;
+    top: 0 px;
+    height: 33px;
+  }
+  header {
+    padding: 0px 0px;
+    margin: 0px 0px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px;
+    padding: 50px 16px 0px 16px;
+    gap: 16px;
+  }
+  .sectionLeft {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    max-width: 100%;
+    gap: 16px;
+  }
+  .titleDescH {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+  .titleH {
+    display: flex;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .titleA {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+  .donateNow {
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+  }
 
-  
-}
-header{
-  padding: 0px 0px;
-  margin: 0px 0px;
-}
-.header{
-  display: flex;
-  flex-direction: column;
-  margin: 0px 0px;
-  padding: 50px 16px  0px 16px;
-  gap: 16px;
-}
- .sectionLeft{ 
-  display: flex;
-  flex-direction: column;
-  padding: 0px 0px;
-  margin: 0px 0px;
-  max-width: 100%;
-  gap: 16px;
- }
- .titleDescH{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
- }
- .titleH{
-  display: flex;
-  font-size: 30px;
-  font-weight: 800;
- }
- .titleA{
-  font-size: 16px;
-  font-weight: 400;
- }
- .button{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 16px;
- }
-.donateNow{
-  width: 100%;
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
+  #learnMore {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #9ca3af;
+  }
+  .sectionLeft hr,
+  .sectionLeft > p {
+    display: none;
+  }
+  .sponsors {
+    display: flex;
+    gap: 16px;
+  }
+  #intel {
+    width: 57.33px;
+    height: 22.24px;
+    top: 4.67px;
+    left: 0.96px;
+  }
+  #fedex {
+    width: 74.67px;
+    height: 32px;
+    padding: 5.33px, 0px, 5.96px, 0px;
+  }
+  #visa {
+    width: 58.67px;
+    height: 32px;
+    padding: 6.67px, 0.33px, 6.67px, 0px;
+  }
+  #disney {
+    width: 70.67px;
+    height: 32px;
+  }
+  .sectionRight {
+    max-width: 100%;
+  }
+  .sectionRight > img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .containerSc {
+    padding: 0px 16px 32px 16px;
+    padding-left: 16px;
+  }
+  .socialProf {
+    padding: 0px 0px 0px 0px;
+  }
+  .socialProf1 {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding: 0px 0px 0px 0px;
+    gap: 32px;
+
+    width: 100%;
+  }
+  .boxSocial,
+  .boxSocial1 {
+    border: none;
+    width: 100%;
+  }
+
+  .containerC {
+    padding: 1px 16px 32px 16px;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 0px;
+  }
+  .row > div > img {
+    display: none;
+  }
+  .imgClimat {
+    display: none;
+  }
+  .climate {
+    display: flex;
+    gap: 32px;
+  }
+  .headingClimat {
+    display: flex;
+    gap: 24px;
+  }
+  .titleClimat {
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .button {
+    font-size: 14px;
+  }
+  #learnMore2 {
+    color: #9ca3af;
+    background-color: #1f2a37;
+    border: 1px solid var(--gray-600, #4b5563);
+  }
+  .containerDonors {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+    gap: 16px;
+    max-width: 460px;
+  }
+  .heading {
+    display: flex;
+    gap: 16px;
+  }
+  .articleHd2 {
+    width: 100%;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0px;
+  }
+  .row1 {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: auto;
+    align-items: center;
+  }
+  .boxD2 {
+    padding-bottom: 16px;
+  }
+  .containerEvents {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+    margin: 0px 0px;
+    width: 100%;
+  }
+  .events {
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    width: 100%;
+  }
+  .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+  }
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 380px;
+  }
+  .cards1 {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+  .card1 {
+    padding: 0px 0px;
+    width: 97%;
+  }
+  .card1 img {
+    width: 100%;
+    max-width: 96%;
+  }
+  #progres3 {
+    width: 46%;
+  }
+  .sum,
+  .visitors,
+  .articleCard,
+  .titleCard {
+    width: 100%;
+    max-width: 97%;
+  }
+  .titleCard {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+  }
+  .articleCard {
+    font-size: 16px;
+    font-weight: 400;
+    color: #9ca3af;
+  }
+  .containerNews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    padding: 32px 16px;
+  }
+  .heading3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .heading3 .title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .heading3 .article {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .newsItemContent {
+    display: flex;
+    flex-direction: column;
+    /* padding: 0px0px; */
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px;
+  }
+  .column > div > img{
+    width: 100%;
+  }
+
+  .newsSeparator {
+    display: none;
+  }
+
+
+
+.formRow,
+.subject,
+#email,
+#submit,
+#subject,
+#message{
+ width: 100%;
+
 }
 
-#learnMore{
-  width: 100%;
-  font-size: 16px;
-  font-weight: 500;
- color: #9CA3AF;
 
-}
-.sectionLeft hr,
-.sectionLeft > p{
-  display: none;
-}
-.sponsors{
-  display: flex;
-  gap: 16px;
-}
-#intel{
-  width: 57.33px;
-height: 22.24px;
-top: 4.67px;
-left: 0.96px;
 
-}
-#fedex{
-  width: 74.67px;
-  height: 32px;
-  padding: 5.33px, 0px, 5.96px, 0px;
-  
-}
-#visa{
-  width: 58.67px;
-  height: 32px;
-  padding: 6.67px, 0.33px, 6.67px, 0px;
-  
-}
-#disney{
-  width: 70.67px;
-  height: 32px;
-  
-}
-.sectionRight{
-  max-width: 100%;
-}
-.sectionRight > img{
-  max-width: 100%;
-  width: 100%;
-}
-.containerSc{
- padding: 0px 16px 32px 16px;
- padding-left: 16px;
-}
-.socialProf{
-  padding: 0px 0px 0px 0px;
-}
-.socialProf1{
+
+
+.containerFooter{
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
-  padding: 0px 0px 0px 0px;
-  gap: 32px;
-  
-  width: 100%;
-}
-.boxSocial,
-.boxSocial1{
-  border: none;
-  width: 100%;
 }
 
-.containerC{
-  padding: 1px 16px 32px 16px;
-}
-.row{
-  display: flex;
-  flex-direction: column;
-  padding: 0px 0px 0px 0px;
-}
-.row > div > img{
-  display: none;
-}
-.imgClimat{
-  display: none;
-}
-.climate{
-  display: flex;
-  gap: 32px;
-}
-.headingClimat{
-  display: flex;
-  gap: 24px;
-}
-.titleClimat{
-  font-size: 30px;
-  font-weight: 800;
-}
-.button{
-  font-size: 14px;
-}
-#learnMore2{
-  color: #9CA3AF;
-  background-color: #1F2A37;
-  border: 1px solid var(--gray-600, #4B5563);
-}
-.containerDonors{
-  display: flex;
-  flex-direction: column;
-  padding: 32px 16px;
-  gap: 16px; 
-  max-width: 460px;
-}
-.heading{
-  display: flex;
-  gap: 16px;
-}
-.articleHd2{
-  width: 100%;
-}
-.cards{
-  display: flex;
-  flex-direction: column;
-  
-  gap: 0px;
-}
-.row1{
-  display: flex;
-  flex-wrap: wrap;
-  
-  
-  gap: auto;
-  align-items:center;
-}
-.boxD2{
-  padding-bottom: 16px;
-}
-.containerEvents{
-  display: flex;
-  flex-direction: column;
-  padding: 32px 16px;
-  margin: 0px 0px;
-  width: 100%;
-}
-.events{
-  display: flex;
-  flex-direction: column;
-}
-.title{
-  width: 100%;
-}
-.heading{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-}
-.title{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 30px;
-}
-.article{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 380px;
-}
-.cards1{
-  display: flex;
-  flex-direction: column;
-  
-  gap: 16px
-}
-.card1{
-  padding:0px 0px ;
-  width: 97%;
 
-}
-.card1 img{
-  width: 100%;
-  max-width: 96%;
-}
-#progres3{
-  width:46% ;
-}
-.sum,
-.visitors,
-.articleCard,
-.titleCard{
-  width: 100%;
-  max-width: 97%;
-}
-.titleCard{
-  font-size: 18px;
-  font-weight: 700;
-  color: white;
-}
-.articleCard{
-  font-size: 16px;
-  font-weight: 400;
-  color: #9CA3AF;
-}
+
 
 
 }
