@@ -12,12 +12,11 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
+.climat,
 .containerDonors,
 footer,
 header,
 .containerSc,
-.containerC,
 .containerEvents,
 .containerNews {
   max-width: 1920px;
@@ -42,9 +41,6 @@ header,
   justify-content: space-between;
   align-items: center;
   height: 65px;
-  /* gap: 64px; */
-  position: sticky;
-  top: 0px;
 }
 .nav {
   display: flex;
@@ -59,7 +55,6 @@ header,
   color: #fff;
   font-size: 24px;
   font-weight: 600;
-  line-height: 150%;
 }
 
 .login {
@@ -69,9 +64,8 @@ header,
 }
 .login a {
   font-weight: 500;
-  width: 45px;
+  width: 47px;
   height: 21px;
-  line-height: 150%;
 }
 .navElement button {
   width: 117px;
@@ -82,27 +76,6 @@ header,
   color: white;
 }
 
-.navElement1 a {
-  width: 75px;
-  height: 24px;
-  font-size: 16px;
-}
-.navElement2 {
-  width: 95px;
-  height: 24px;
-}
-.navElement3 {
-  width: 67px;
-  height: 24px;
-}
-.navElement4 {
-  width: 42px;
-  height: 24px;
-}
-.navElement5 {
-  width: 62px;
-  height: 24px;
-}
 .login > a,
 .navElement1 > a,
 .navElement2 > a,
@@ -113,7 +86,6 @@ header,
   color: white;
   font-size: 16px;
   font-weight: 500;
-  line-height: 150%; /* 24px */
 }
 
 #intel {
@@ -175,7 +147,6 @@ header {
 }
 .sponsors {
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
@@ -243,14 +214,12 @@ header button {
 .containerSc {
   display: flex;
   flex-direction: column;
-  /* height: 213px; */
   padding: 96px, 0px;
   border: 1px, 0px, 1px, 0px;
   gap: 64px;
 }
 .socialProf {
   display: flex;
-
   flex-direction: column;
   align-items: center;
   padding: 0px 0px 96px;
@@ -259,34 +228,34 @@ header button {
 
 .socialProf1 {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 24px 16px;
   background-color: #374151;
   border-radius: 8px;
   border: 1px solid #374151;
+  width: 100%;
+  max-width: 85%;
 }
 .boxSocial {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 248px;
+  width: 100%;
+
   border-right: 1px solid;
 }
 .boxSocial1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 248px;
+  width: 100%;
 }
 .headingSsocial {
   display: flex;
   justify-content: center;
   font-size: 36px;
   font-weight: 800;
-  line-height: 45px;
-  letter-spacing: -0.01em;
   text-align: center;
   color: white;
 }
@@ -297,7 +266,6 @@ header button {
   color: #9ca3af;
   font-size: 16px;
   font-weight: 400;
-  line-height: 150%; /* 24px */
 }
 
 /* Climat */
@@ -319,6 +287,7 @@ header button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
   gap: 24px;
 }
 
@@ -355,10 +324,13 @@ header button {
   width: 16px;
   height: 16px;
 }
+.imgClimat {
+  width: 100%;
+}
 
 .row > div > img {
-  width: 540.46px;
-  height: 406.78px;
+  width: 100%;
+  max-width: 100%;
   border-radius: 8px;
 }
 .titleClimat {
@@ -433,7 +405,7 @@ header button {
 .row1 {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 .boxD2 {
@@ -547,6 +519,8 @@ header button {
   display: flex;
   padding: 32px;
   flex-direction: column;
+
+  max-width: 45%;
   gap: 16px;
   flex: 1 0 0;
 }
@@ -554,7 +528,6 @@ header button {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   justify-content: space-between;
 }
 
@@ -569,8 +542,9 @@ header button {
 
 .progres :nth-child(3) {
   position: relative;
-  bottom: 13px;
-  width: 441px;
+  bottom: 14px;
+  width: 80%;
+  height: 10px;
 }
 
 .sum {
@@ -605,10 +579,11 @@ header button {
 }
 .titleCard,
 .articleCard {
-  width: 512px;
+  color: white;
 }
 #progres3 {
-  width: 276px;
+  width: 50%;
+  height: 10px;
 }
 .donate {
   display: flex;
@@ -637,6 +612,15 @@ header button {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+.img2 img {
+  width: 100%;
+  max-width: 100%;
+}
+
+#progres1 {
+  width: 100%;
+  height: 10px;
 }
 
 /* News */
@@ -679,6 +663,9 @@ header button {
 
   align-items: flex-start;
   gap: 32px;
+}
+.newsItemContent > .column img {
+  width: 100%;
 }
 
 .newsItemContent .article .title,
@@ -725,7 +712,6 @@ header button {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  width: 80%;
 }
 .formContact .title {
   font-size: 36px;
@@ -744,8 +730,8 @@ form {
   flex-direction: column;
   align-items: center;
   padding: 24px 0px 24px 0px;
-  /* width: 100%; */
   gap: 32px;
+  width: 50%;
 }
 .formRow {
   display: flex;
@@ -754,65 +740,32 @@ form {
   gap: 32px;
   align-self: stretch;
 }
-.inputRow input {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-}
-.email {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+
 .email :nth-child(1) {
   color: white;
 }
-
-#email {
-  display: flex;
-  padding: 14px 16px;
-  gap: 10px;
-  width: 640px;
-  border-radius: 8px;
-  border: 1px solid #4b5563;
-  background-color: #374151;
-  font-size: 16px;
+.input,
+.subject,
+.message {
+  width: 100%;
 }
 
+#email,
+#message,
 #subject {
   display: flex;
+  align-items: flex-start;
   padding: 14px 16px;
   gap: 10px;
-  width: 640px;
   border-radius: 8px;
   border: 1px solid #4b5563;
   background-color: #374151;
   font-size: 16px;
-}
-#message {
-  display: flex;
-  padding: 14px 16px;
-  gap: 10px;
-  width: 640px;
-  border-radius: 8px;
-  border: 1px solid #4b5563;
-  background-color: #374151;
-  font-size: 16px;
-  /* width: 70%; */
+  width: 100%;
 }
 
-#submit {
-  display: flex;
-  justify-content: center;
-
-  gap: 8px;
-  border-radius: 8px;
-  padding: 10px 20px;
-  background-color: #1c64f2;
+label {
   color: white;
-  font-size: 14px;
-  font-weight: 500;
 }
 
 .containerFooter {
@@ -909,9 +862,11 @@ footer {
     justify-content: space-between;
     padding: 24px 16px 0px 16px;
     position: fixed;
+    background-color: #111928;
     width: 90%;
-    top: 0 px;
+    top: 0px;
     height: 33px;
+    margin: 0px 0px;
   }
   header {
     padding: 0px 0px;
@@ -1092,7 +1047,7 @@ footer {
     flex-direction: column;
     padding: 32px 16px;
     margin: 0px 0px;
-    width: 100%;
+    width: 95%;
   }
   .events {
     display: flex;
@@ -1128,21 +1083,15 @@ footer {
   }
   .card1 {
     padding: 0px 0px;
-    width: 97%;
+    max-width: 100%;
   }
-  .card1 img {
-    width: 100%;
-    max-width: 96%;
-  }
-  #progres3 {
-    width: 46%;
-  }
+
   .sum,
   .visitors,
   .articleCard,
   .titleCard {
     width: 100%;
-    max-width: 97%;
+    max-width: 90%;
   }
   .titleCard {
     font-size: 18px;
@@ -1186,14 +1135,13 @@ footer {
   .newsItemContent {
     display: flex;
     flex-direction: column;
-    /* padding: 0px0px; */
   }
   .column {
     display: flex;
     flex-direction: column;
     padding: 0px 0px;
   }
-  .column > div > img{
+  .column > div > img {
     width: 100%;
   }
 
@@ -1201,29 +1149,8 @@ footer {
     display: none;
   }
 
-
-
-.formRow,
-.subject,
-#email,
-#submit,
-#subject,
-#message{
- width: 100%;
-
-}
-
-
-
-
-
-.containerFooter{
-  display: flex;
-  flex-direction: column;
-}
-
-
-
-
-
+  .containerFooter {
+    display: flex;
+    flex-direction: column;
+  }
 }
