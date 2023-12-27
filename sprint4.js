@@ -2,68 +2,50 @@
 
 // 1. Napisz funkcję dodającą dwie liczby
 function sum(a, b) {
-  const result = a * b;
+  const result = a + b;
   return result;
 }
 let result = sum(2, 2);
-console.log(result);
 
 // 2. Napisz funkcję zwracającą długość tablicy
 const numberArray = [2, 2, 4, 5, 6];
-function check(parametr) {
-  const arrayLength = parametr;
-  return parametr;
+function check(numberArray) {
+  return numberArray.length;
 }
-const arrayLength = check(numberArray.length);
-console.log(arrayLength);
-
+check(numberArray);
 // 3. Napisz funkcję sprawdzającą, czy liczba jest parzysta
-
-function check1(a) {
-  let evenNumber = true || false;
-  if (a % 2 === 0) {
-    evenNumber = true;
-  } else {
-    evenNumber = false;
-  }
+let b = 41;
+function check1(b) {
+  let evenNumber =
+    b % 2 === 0 ? "to jest liczba parzysta" : "to jest liczba nieparzysta";
   return evenNumber;
 }
-let evenNumber = check1(4);
-console.log(evenNumber);
-
+check1();
 // 4. Napisz funkcję obliczającą pole kwadratu
-
-function product(b) {
-  const area = b * b;
-  return area;
+let cos = 5;
+function product(cos) {
+  return cos * cos;
 }
-const area = product(5);
-console.log(area);
+product();
 
 // 5. Napisz funkcję zwracającą odwrotność liczby
+let c = 5;
 function inverse(c) {
-  const res = -c;
-  return res;
+  return 1 / c;
 }
-const res = inverse(5);
-console.log(res);
-
+inverse();
 // 6. Napisz funkcję konwertującą stopnie Celsjusza na Fahrenheita
-function convert(a) {
-  const temp = a * 1.8 + 32;
-  return temp;
+let temp = 2;
+function convert(temp) {
+  return temp * 1.8 + 32;
 }
-const temp = convert(20);
-console.log(temp);
-
+convert();
 // 7. Napisz funkcję zwracającą pierwszy element tablicy
 const array = [3, 4, 6, 7];
 function firstElement(array) {
-  const first = array;
-  return first;
+  return array[0];
 }
-const first = array[0];
-console.log(first);
+firstElement(array);
 
 // 8. Napisz funkcję łączącą dwa ciągi znaków, utwórz warunek który sprawdzi czy argumenty są typu string
 
@@ -71,58 +53,53 @@ let a = "98347";
 let p = "324958";
 function conect(a, p) {
   let resu = a + p;
-  console.log(typeof a, typeof p);
-  return resu;
+
+  const types =
+    typeof a == "string" && typeof p == "string" ? "string" : "is not string";
+
+  return { resu, types };
 }
-let resu = conect(a, p);
-console.log(resu);
+conect();
 
 // 9. Napisz funkcję zwracającą typ zmiennej
+function backType(a) {
+  return typeof a;
+}
 
 // 10. Napisz funkcję zwracającą absolutną wartość liczby
+const licza = -7;
 function absolut(liczba) {
-  const result = Math.abs(liczba);
-  return result;
+  return Math.abs(liczba);
 }
-result = absolut(-7);
-console.log(result);
-
+absolut();
 //PODSTAWY PĘTLI:
 
 // 1. Napisz funkcję, która będzie miała pętlę for, która wyświetli liczby od 1 do 10
 function view() {
-  for (let i = 0; i < 11; i++) {
+  for (let i = 1; i < 11; i++) {
     console.log(i);
   }
 }
 view();
 
 // 2. Napisz funkcję, która będzie używać pętli while do wyświetlenia liczb parzystych mniejszych od 20
-function eNumber() {
-  let i = 1;
-  if (i % 2 == 0) {
-    while (i < 20) {
-      console.log(i);
-      i += 2;
-    }
-  } else {
-    i = i + 1;
-    while (i < 20) {
-      console.log(i);
-      i += 2;
-    }
+const inc = 2;
+function eNumber(inc) {
+  while (inc < 20) {
+    console.log(inc);
+    inc += 2;
   }
 }
 
-eNumber();
+eNumber(inc);
 
 // 3. Napisz funkcję, która użyje pętli do while do wyświetlenia liczb od 10 do 1
 function number() {
   let i = 10;
   do {
-    i--;
     console.log(i);
-  } while (i > 1);
+    i--;
+  } while (i >= 1);
 }
 number();
 
@@ -145,33 +122,29 @@ const carModel = {
   bmw: "series 5",
   wolkswagen: "passat",
 };
-function incrementObject() {
-  for (let marka in carModel) {
-    console.log(marka);
+function incrementObject(carModel) {
+  for (const marka in carModel) {
   }
-  return incrementObject;
 }
-incrementObject();
+incrementObject(carModel);
 
 // 6. Napisz funkcję, która użyje pętli for of do iteracji po elementach tablicy
 const arrayOfNumber = [4, 5, 6, 6, 7];
-function incrementArray() {
-  for (let numer of arrayOfNumber) {
-    console.log(numer);
+function incrementArray(arrayOfNumber) {
+  for (const numer of arrayOfNumber) {
   }
 }
-incrementArray();
+incrementArray(arrayOfNumber);
 
 // 7. Napisz funkcję, która użyje pętli for do obliczania sumy elementów tablicy
 
-function sumArray() {
+function sumArray(arrayOfNumber) {
   let sum = 0;
   for (let sumArray of arrayOfNumber) {
     sum += sumArray;
   }
-  console.log(sum);
 }
-sumArray();
+sumArray(arrayOfNumber);
 // 8. Napisz funkcję, która użyje pętli while do odwrócenia ciągu znaków
 
 function reverseContent(string) {
@@ -182,11 +155,12 @@ function reverseContent(string) {
     str++;
   }
   console.log(reversetString);
+  return reversetString;
 }
 reverseContent("scigacz");
 
 // 9. Napisz funkcję, która użyje pętli for of do znalezienia największej liczby w tablicy
-// const arrayOfNumber = [4, 5, 6, 6, 7];
+
 function maxValueArray(arrayOfNumber) {
   let maxi = -Infinity;
   for (let numer of arrayOfNumber) {
@@ -296,9 +270,7 @@ function addRemFirstElement() {
 addRemFirstElement();
 
 // 11. Napisz funkcję, która przy użyciu metody map zwiększy każdy element tablicy o 1
-const reMapped = arrayOfNumber.map(function (numer) {
-  return numer + 1;
-});
+const reMapped = arrayOfNumber.map((numer) => numer + 1);
 console.log(reMapped);
 // 12. Napisz funkcję, która przy użyciu metody filter zwróci tylko parzyste liczby z tablicy
 const filtreArray = arrayOfNumber.filter(function (y) {
@@ -321,17 +293,15 @@ const string = "jedziemy na wakacje.";
 const divaidedString = () => string.split(" ");
 console.log(divaidedString());
 // 17. Napisz funkcję, która przy użyciu metody filter zwróci tylko nieparzyste liczby z tablicy
-const countOdd = arrayOfNumber.filter(function (x) {
-  return x % 2 !== 0;
-});
+const countOdd = arrayOfNumber.filter((x) => x % 2 !== 0);
 console.log(countOdd);
 // 18. Napisz funkcję, która przy użyciu metody map zwróci kwadraty każdego elementu tablicy
-const arraySquared = arrayOfNumber.map(num => num * num);
+const arraySquared = arrayOfNumber.map((num) => num * num);
 console.log(arraySquared);
 // // 19. Napisz funkcję, która przy użyciu metody filter zwróci tylko te słowa z ciągu znaków, które mają więcej niż 3 litery
-const newArray =['dzis' , 'mam' , 'wolne'];
-const longString = () => newArray.filter(word => word.length > 3);
+const newArray = ["dzis", "mam", "wolne"];
+const longString = () => newArray.filter((word) => word.length > 3);
 console.log(longString());
 // 20. Napisz funkcję, która przy użyciu metody map zwróci każdy element tablicy zapisany wielkimi literami
-const bigLatter = newArray.map( text => text.toLocaleUpperCase() );
+const bigLatter = newArray.map((text) => text.toLocaleUpperCase());
 console.log(bigLatter);
