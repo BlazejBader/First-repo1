@@ -305,3 +305,4 @@ console.log(longString());
 // 20. Napisz funkcję, która przy użyciu metody map zwróci każdy element tablicy zapisany wielkimi literami
 const bigLatter = newArray.map((text) => text.toLocaleUpperCase());
 console.log(bigLatter);
+sprint5.js

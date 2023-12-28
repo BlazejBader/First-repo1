@@ -8,11 +8,9 @@ const people = [
 
 //  Napisz funkcję, która przetwarza każdą osobę w tablicy people w następujący sposób:
 function procesPerson(person) {
-  const firstName = person.firstName;
-  const lastName = person.lastName;
   //  a) Dla każdego imienia, weź ostatnie 3 litery, odwróć ich kolejność i zapisz do zmiennej.
 
-  const namePart = firstName
+  const namePart = person.firstName
     .slice(-3)
     .split("")
     .reverse("")
@@ -21,7 +19,7 @@ function procesPerson(person) {
 
   //  b) Dla każdego nazwiska, weź pierwsze 3 litery, zamień miejscami pierwszą i ostatnią literę, i dołącz do zmiennej utworzonej w punkcie a).
 
-  const partSurname = lastName
+  const partSurname = person.lastName
     .slice(0, 3)
     .split("")
     .reverse("")
@@ -41,12 +39,8 @@ function procesPerson(person) {
   return { ...person, nickName };
 }
 
-const procesPeople = (people) => people.map(procesPerson);
-const people1 = procesPeople(people);
+const procesPeople = people.map((person) => procesPerson(person));
 // console.log(people1);
-// for (const [key, value] of Object.entries(people1)) {
-//     console.log(`${key}:`);
-//   }
 
 // //    Dodaj pole age, które jest wyliczane na podstawie sumy liter w imieniu i nazwisku. Jeżeli ilość liter w imieniu i
 // //                 nazwisku jest parzysta to wiek będzie będzie wyliczany, na postawie długości kluczy znajdujących się w obiekcie pomniejszone o długość imienia.
@@ -143,11 +137,7 @@ people4.forEach((person) => {
 
 const colors = ["red", "green", "yellow", "blue", "pink", "orange"];
 
-function getColor(number) {
- 
-if (number === undefined) {
-    number = 5;
-  }
+function getColor(number = 5) {
   if (number < 1) {
     console.log(`Podałeś za małą liczbę, liczba nie może być mniejsza niż 1`);
   } else if (number > 30) {
@@ -155,7 +145,7 @@ if (number === undefined) {
   }
 
   let sum = 0;
-  
+
   for (const person of people4) {
     let count = 0;
     for (const [key, value] of Object.entries(person)) {
@@ -167,7 +157,7 @@ if (number === undefined) {
     }
   }
   const result = Math.abs(sum - number) % colors.length;
- return colors[result];
+  return colors[result];
 }
 getColor();
 
