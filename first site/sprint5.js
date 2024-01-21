@@ -40,31 +40,14 @@ function procesPerson(person) {
 }
 
 const procesPeople = people.map((person) => procesPerson(person));
+const people1 = procesPeople;
 // console.log(people1);
 
 // //    Dodaj pole age, które jest wyliczane na podstawie sumy liter w imieniu i nazwisku. Jeżeli ilość liter w imieniu i
 // //                 nazwisku jest parzysta to wiek będzie będzie wyliczany, na postawie długości kluczy znajdujących się w obiekcie pomniejszone o długość imienia.
 // // // ZAD 2 //
 
-// Dane wejściowe
-// const people1 = [
-//   {
-//     firstName: "Alicja",
-//     lastName: "Kowalska",
-//     nickname: "Ajcwok",
-//   },
-//   {
-//     firstName: "Jan",
-//     lastName: "Nowak",
-//     nickname: "Najwon",
-//   },
-//   {
-//     firstName: "Halina",
-//     lastName: "Malina",
-//     nickname: "Anilam",
-//   },
-// ];
-function age1(person) {
+function createAge(person) {
   let age = person.firstName.length + person.lastName.length;
   const keys = Object.keys(person);
   const totalLength = keys.reduce((sum, key) => sum + key.length, 0);
@@ -77,7 +60,7 @@ function age1(person) {
   return { ...person, age };
 }
 
-const people2 = people1.map(age1);
+const people2 = people1.map(createAge);
 
 console.log(people2);
 
@@ -112,6 +95,7 @@ function addIntroduce(person) {
 
   return { ...person, introduceYourself };
 }
+
 const people4 = people3.map(addIntroduce);
 
 people4.forEach((person) => {
@@ -176,3 +160,4 @@ console.log(getColor());
 //       (45 - 5) % 6 =    console.log(colors[4])  pink
 //        Hints  - jeżeli po odjęciu parametru funkcji od sumy liter uzyskacie wartośc ujemną, możecie użyć metody z biblioteki Math,
 //          Math.abs(-20), która zamieni liczbę na wartość absolutną, czyli dodatnią
+

@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+#constainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+#windowKeuAndValue {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  width: 200px;
+  min-height: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: lavender;
+  display: none;
+}
+#closeWindowKeuAndValue {
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  border: 2px solid black;
+  border-radius: 70px;
+  background-color: lavender;
+  padding: 3px;
+  display: none;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#wievTable {
+  display: flex;
+  justify-content: space-around;
+}
+
+#wrapperNavTable {
+  display: flex;
+  justify-content: space-around;
+}
+#removeSelectedLine{
+  display: none;
+}
