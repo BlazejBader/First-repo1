@@ -1,14 +1,26 @@
 html {
   box-sizing: border-box;
 }
+body {
+  background-image: url(images/light\ theme.jpg);
+}
+.mainButton {
+  padding: 15px;
+  border-radius: 5px;
+}
+thead {
+  background-color: cadetblue;
+  border: 2px solid black;
+}
 #constainer {
   display: flex;
   position: relative;
   justify-content: center;
+  max-width: 70%vw;
 }
 #windowKeuAndValue {
   display: flex;
-  flex-wrap: wrap;
+
   position: fixed;
   top: 60px;
   right: 10px;
@@ -29,21 +41,36 @@ html {
   padding: 3px;
   display: none;
 }
+.buttonPlus {
+  padding: 3px;
+}
+.buttonBox {
+  display: flex;
+  align-items: center;
+}
+.cellAction {
+  display: flex;
+  align-items: center;
+}
 
 #buttons {
   display: flex;
   justify-content: center;
   text-align: center;
+  gap: 10px;
 }
 #wievTable {
   display: flex;
   justify-content: space-around;
+}
+table {
+  max-width: 70%;
 }
 
 #wrapperNavTable {
   display: flex;
   justify-content: space-around;
 }
-#removeSelectedLine{
+#removeSelectedLine {
   display: none;
 }

@@ -10,7 +10,6 @@ let currentModel = null;
 const toggle = document.getElementById("closeWindowKeuAndValue");
 toggle.addEventListener("click", closedWindow);
 
-
 function removeThisLine(event) {
   const rowToRemove = event.target.parentNode.parentNode;
   rowToRemove.parentNode.removeChild(rowToRemove);
@@ -93,12 +92,15 @@ function createTable() {
     const dates = dateObject.toLocaleDateString();
     date.innerHTML = dates; //data  toLocaleDateString
     const buttonActionCell = rowBody.insertCell(-1);
+    buttonActionCell.className='cellAction'
     let buttonActionPlus = document.createElement("button");
+    buttonActionPlus.className='buttonPlus';
     buttonActionPlus.innerHTML = "+";
     buttonActionPlus.addEventListener("click", createNewWindow);
     buttonActionCell.appendChild(buttonActionPlus);
 
     const buttonActionBox = document.createElement("button");
+    buttonActionBox.className='buttonBox'
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     buttonActionBox.innerHTML = "kosz";
@@ -114,20 +116,28 @@ function createTable() {
 
   return tabela;
 }
+// const selectCheckbox = "";
 
 function actionSelectCheckbox(event) {
+  const selectCheckbox = document.querySelectorAll(
+    'input[type="checkbox"]:checked'
+  );
+  const removeSelectedLine = document.getElementById("removeSelectedLine");
+  addEventListener("click", removeLine);
   event.stopPropagation();
-  const selectCheckbox = document.querySelectorAll("input[type=checkbox]");
-  const removeSelectedLine = document.getElementById('removeSelectedLine')
-  selectCheckbox.forEach(checkbox => {
-    
-      if (checkbox.checked) {
-    removeSelectedLine.style.display='inline-block'
-    }else{
-      removeSelectedLine.style.display='none'
+
+  if (selectCheckbox.length > 0) {
+    removeSelectedLine.style.display = "inline-block";
+  } else {
+    removeSelectedLine.style.display = "none";
+  }
+  function removeLine() {
+    let rowToRemove = "";
+    for (let i = 0; i < selectCheckbox.length; i++) {
+      rowToRemove = selectCheckbox[i].parentNode.parentNode.parentNode;
     }
-  });
- 
+    rowToRemove.parentNode.removeChild(rowToRemove);
+  }
 }
 
 document.addEventListener(
@@ -147,9 +157,7 @@ document.addEventListener(
   true
 );
 
-
 function createNavTable() {
-  
   const buttonArrowLeft = document.createElement("button");
   buttonArrowLeft.innerHTML = "<";
   displayNavTable.appendChild(buttonArrowLeft);
@@ -161,8 +169,8 @@ function createNavTable() {
   buttonArrowRight.innerHTML = ">";
   displayNavTable.appendChild(buttonArrowRight);
   const selectPlace = document.getElementById("selectCountRow");
- 
-  selectPlace.innerHTML='';
+
+  selectPlace.innerHTML = "";
   const selectElement = document.createElement("select");
   const option1 = document.createElement("option");
   option1.value = 10;
@@ -187,10 +195,11 @@ function display(event) {
 
   displayTable.appendChild(createTable());
   displayNavTable.innerHTML = "";
- displayNavTable.appendChild(createNavTable());
+  displayNavTable.appendChild(createNavTable());
 }
 keys.forEach((key) => {
   const button = document.createElement("button");
+  button.className='mainButton'
   button.addEventListener("click", display);
   button.innerHTML = key;
   buttons.appendChild(button);
