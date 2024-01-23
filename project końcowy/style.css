@@ -11,6 +11,8 @@ body {
   padding: 15px;
   border-radius: 5px;
   font-weight: 600;
+  box-shadow: 1px 3px 3px 3px;
+  background: linear-gradient(to top, #1eafaf, #5be60a);
 }
 .mainButton:hover{
   scale: calc(1.05);

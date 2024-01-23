@@ -114,6 +114,7 @@ function createTable() {
     buttonActionBox.appendChild(checkbox);
     buttonActionCell.appendChild(buttonActionBox);
     buttonActionBox.addEventListener("click", removeThisLine);
+    icon.removeEventListener("click", removeThisLine);
     checkbox.addEventListener("change", actionSelectCheckbox(event));
 
     tabela.appendChild(tableBody);
@@ -183,7 +184,7 @@ document.addEventListener(
       removeThisLine(event);
     }
 
-    if (event.target.type === "checkbox") {
+    else if (event.target.type === "checkbox") {
       actionSelectCheckbox(event);
     }
   },
