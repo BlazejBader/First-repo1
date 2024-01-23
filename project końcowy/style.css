@@ -3,10 +3,21 @@ html {
 }
 body {
   background-image: url(images/light\ theme.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 .mainButton {
   padding: 15px;
   border-radius: 5px;
+  font-weight: 600;
+}
+.mainButton:hover{
+  scale: calc(1.05);
+  background-color: lightcyan;
+  color: darkred;
+  
+  border:  inset;
 }
 thead {
   background-color: cadetblue;
@@ -47,8 +58,9 @@ thead {
 }
 #closeWindowKeuAndValue:hover{
   scale: calc(1.2);
-  border:color-mix(in xyz-d50, color percentage, color percentage);
+  border:cornflowerblue inset;
 }
+
 .buttonPlus {
   padding: 3px;
 }

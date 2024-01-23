@@ -40,7 +40,7 @@ function createNewWindow(event) {
     const cellBodyContent1 = document.createTextNode(value);
     cellBody.appendChild(cellBodyContent);
     cellBody1.appendChild(cellBodyContent1);
-    cellBody1.style.maxWidth='150px'
+    cellBody1.style.maxWidth = "150px";
     tableBody.appendChild(rowBody);
   });
 
@@ -136,11 +136,14 @@ function actionSelectCheckbox(event) {
   } else {
     removeSelectedLine.style.display = "none";
   }
-  function removeLine() {
-    let rowToRemove = "";
-    for (let i = 0; i < selectCheckbox.length; i++) {
-      rowToRemove = selectCheckbox[i].parentNode.parentNode.parentNode;
-    }
+}
+function removeLine() {
+  const selectCheckbox = document.querySelectorAll(
+    'input[type="checkbox"]:checked'
+  );
+  let rowToRemove = "";
+  for (let i = 0; i < selectCheckbox.length; i++) {
+    rowToRemove = selectCheckbox[i].parentNode.parentNode.parentNode;
     rowToRemove.parentNode.removeChild(rowToRemove);
   }
 }
