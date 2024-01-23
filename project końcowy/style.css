@@ -40,8 +40,7 @@ thead {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10%;
-  max-width: 60%;
+  width: 60%;
 }
 span> button> img{
   width: 15px;
@@ -50,22 +49,27 @@ span> button> img{
 .serchPlace{
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
 #secondTable {
-  max-width: 100%;
+ width: 90%;
+
 }
+
 #windowKeuAndValue {
   display: flex;
 
   position: fixed;
   top: 120px;
   right: 10px;
-  width: 230px;
+  min-width: fit-content;
   min-height: 200px;
+  max-height: 600px;
   border: 2px solid black;
   border-radius: 5px;
   background-color: lavender;
+  overflow-y: scroll;
   display: none;
 }
 #closeWindowKeuAndValue {

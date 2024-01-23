@@ -41,6 +41,7 @@ function createNewWindow(event) {
     const cellBodyContent1 = document.createTextNode(value);
     cellBody.appendChild(cellBodyContent);
     cellBody1.appendChild(cellBodyContent1);
+    cellBody1.id='cellBody1'
     cellBody1.style.maxWidth = "150px";
     tableBody.appendChild(rowBody);
   });
