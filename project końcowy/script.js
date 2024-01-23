@@ -4,6 +4,7 @@ const buttons = document.getElementById("buttons");
 const displayTable = document.getElementById("wievTable");
 let tabela = "";
 let rowBody = "";
+const wrapperNavTable = document.getElementById('wrapperNavTable')
 const displayNavTable = document.getElementById("navTable");
 const keys = Object.keys(data);
 const wievKeyAndValue = document.getElementById("windowKeuAndValue");
@@ -200,7 +201,7 @@ function display(event) {
 
   displayTable.appendChild(createTable());
   displayNavTable.innerHTML = "";
-  displayNavTable.appendChild(createNavTable());
+  wrapperNavTable.appendChild(createNavTable());
 }
 keys.forEach((key) => {
   const button = document.createElement("button");
