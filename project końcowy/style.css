@@ -16,15 +16,19 @@ thead {
   display: flex;
   position: relative;
   justify-content: center;
-  max-width: 70%vw;
+  align-items: center;
+  max-width: 60%vw;
+}
+#secondTable {
+  max-width: 100%;
 }
 #windowKeuAndValue {
   display: flex;
 
   position: fixed;
-  top: 60px;
+  top: 120px;
   right: 10px;
-  width: 200px;
+  width: 230px;
   min-height: 200px;
   border: 2px solid black;
   border-radius: 5px;
@@ -33,13 +37,17 @@ thead {
 }
 #closeWindowKeuAndValue {
   position: fixed;
-  top: 30px;
+  top: 90px;
   right: 10px;
-  border: 2px solid black;
+
   border-radius: 70px;
   background-color: lavender;
   padding: 3px;
   display: none;
+}
+#closeWindowKeuAndValue:hover{
+  scale: calc(1.2);
+  border:color-mix(in xyz-d50, color percentage, color percentage);
 }
 .buttonPlus {
   padding: 3px;
@@ -51,8 +59,12 @@ thead {
 .cellAction {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
-
+.iconBox {
+  width: 17px;
+  height: 17px;
+}
 #buttons {
   display: flex;
   justify-content: center;
@@ -64,12 +76,22 @@ thead {
   justify-content: space-around;
 }
 table {
-  max-width: 70%;
+  width: 60%;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#wrapperLastSection {
+  display: flex;
+  justify-content: center;
 }
 
 #wrapperNavTable {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 60%;
 }
 #removeSelectedLine {
   display: none;

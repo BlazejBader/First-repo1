@@ -2,7 +2,8 @@ import { data } from "./data.js";
 const mainContainer = document.getElementById("container");
 const buttons = document.getElementById("buttons");
 const displayTable = document.getElementById("wievTable");
-
+let tabela = "";
+let rowBody = "";
 const displayNavTable = document.getElementById("navTable");
 const keys = Object.keys(data);
 const wievKeyAndValue = document.getElementById("windowKeuAndValue");
@@ -27,29 +28,31 @@ function createNewWindow(event) {
   let rowToGet = event.target.parentNode.parentNode.rowIndex - 1;
 
   const secondTable = document.createElement("table");
+  secondTable.id = "secondTable";
   wievKeyAndValue.appendChild(secondTable);
   const tableBody = document.createElement("tbody");
-
-  Object.entries(currentModel[rowToGet]).forEach((key, value) => {
+  Object.entries(currentModel[rowToGet]).forEach(([key, value]) => {
     const rowBody = document.createElement("tr");
     const cellBody = document.createElement("td");
     rowBody.appendChild(cellBody);
-    const cellBodyContent = document.createTextNode(key);
-    cellBody.appendChild(cellBodyContent);
     const cellBody1 = rowBody.insertCell(-1);
+    const cellBodyContent = document.createTextNode(key);
     const cellBodyContent1 = document.createTextNode(value);
+    cellBody.appendChild(cellBodyContent);
     cellBody1.appendChild(cellBodyContent1);
+    cellBody1.style.maxWidth='150px'
     tableBody.appendChild(rowBody);
   });
+
   secondTable.appendChild(tableBody);
 
   return wievKeyAndValue;
 }
 
 function createTable() {
-  const tabela = document.createElement("table");
-  const tableHead = document.createElement("thead");
+  tabela = document.createElement("table");
   const tableBody = document.createElement("tbody");
+  const tableHead = document.createElement("thead");
   const rowHead = document.createElement("tr");
   const nameId = document.createElement("td");
   const contentId = document.createTextNode(`id`);
@@ -72,7 +75,7 @@ function createTable() {
   tabela.appendChild(tableHead);
 
   for (let i = 0; i < currentModel.length; i++) {
-    const rowBody = document.createElement("tr");
+    rowBody = document.createElement("tr");
     const firstCellBody = document.createElement("td");
     const contentFirstCellBody = document.createTextNode(i + 1);
     firstCellBody.appendChild(contentFirstCellBody);
@@ -92,18 +95,21 @@ function createTable() {
     const dates = dateObject.toLocaleDateString();
     date.innerHTML = dates; //data  toLocaleDateString
     const buttonActionCell = rowBody.insertCell(-1);
-    buttonActionCell.className='cellAction'
+    buttonActionCell.className = "cellAction";
     let buttonActionPlus = document.createElement("button");
-    buttonActionPlus.className='buttonPlus';
+    buttonActionPlus.className = "buttonPlus";
     buttonActionPlus.innerHTML = "+";
     buttonActionPlus.addEventListener("click", createNewWindow);
     buttonActionCell.appendChild(buttonActionPlus);
 
     const buttonActionBox = document.createElement("button");
-    buttonActionBox.className='buttonBox'
+    buttonActionBox.className = "buttonBox";
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    buttonActionBox.innerHTML = "kosz";
+    let icon = document.createElement("img");
+    icon.src = "images/kosz.png";
+    icon.className = "iconBox";
+    buttonActionBox.appendChild(icon);
     buttonActionBox.appendChild(checkbox);
     buttonActionCell.appendChild(buttonActionBox);
     buttonActionBox.addEventListener("click", removeThisLine);
@@ -116,7 +122,6 @@ function createTable() {
 
   return tabela;
 }
-// const selectCheckbox = "";
 
 function actionSelectCheckbox(event) {
   const selectCheckbox = document.querySelectorAll(
@@ -143,10 +148,7 @@ function actionSelectCheckbox(event) {
 document.addEventListener(
   "click",
   function (event) {
-    if (
-      event.target.tagName === "button" &&
-      event.target.innerHTML === "kosz"
-    ) {
+    if (event.target.tagName === "button" || event.target.tagName === "img") {
       removeThisLine(event);
     }
 
@@ -199,7 +201,7 @@ function display(event) {
 }
 keys.forEach((key) => {
   const button = document.createElement("button");
-  button.className='mainButton'
+  button.className = "mainButton";
   button.addEventListener("click", display);
   button.innerHTML = key;
   buttons.appendChild(button);
