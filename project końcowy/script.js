@@ -4,7 +4,7 @@ const buttons = document.getElementById("buttons");
 const displayTable = document.getElementById("wievTable");
 let tabela = "";
 let rowBody = "";
-const wrapperNavTable = document.getElementById('wrapperNavTable')
+const wrapperNavTable = document.getElementById("wrapperNavTable");
 const displayNavTable = document.getElementById("navTable");
 const keys = Object.keys(data);
 const wievKeyAndValue = document.getElementById("windowKeuAndValue");
@@ -13,7 +13,7 @@ const toggle = document.getElementById("closeWindowKeuAndValue");
 toggle.addEventListener("click", closedWindow);
 
 function removeThisLine(event) {
-  const rowToRemove = event.target.parentNode.parentNode;
+  const rowToRemove = event.target.closest("tr");
   rowToRemove.parentNode.removeChild(rowToRemove);
 }
 
@@ -41,7 +41,7 @@ function createNewWindow(event) {
     const cellBodyContent1 = document.createTextNode(value);
     cellBody.appendChild(cellBodyContent);
     cellBody1.appendChild(cellBodyContent1);
-    cellBody1.id='cellBody1'
+    cellBody1.id = "cellBody1";
     cellBody1.style.maxWidth = "150px";
     tableBody.appendChild(rowBody);
   });
@@ -111,12 +111,11 @@ function createTable() {
     let icon = document.createElement("img");
     icon.src = "images/kosz.png";
     icon.className = "iconBox";
+    icon.removeEventListener("click", removeThisLine);
     buttonActionBox.appendChild(icon);
     buttonActionBox.appendChild(checkbox);
     buttonActionCell.appendChild(buttonActionBox);
     buttonActionBox.addEventListener("click", removeThisLine);
-    icon.removeEventListener("click", removeThisLine);
-    checkbox.addEventListener("change", actionSelectCheckbox(event));
 
     tabela.appendChild(tableBody);
 
@@ -158,7 +157,7 @@ function actionSelectCheckbox(event) {
     'input[type="checkbox"]:checked'
   );
   const removeSelectedLine = document.getElementById("removeSelectedLine");
-  addEventListener("click", removeLine);
+  removeSelectedLine.addEventListener("click", removeLine);
   event.stopPropagation();
 
   if (selectCheckbox.length > 0) {
@@ -173,7 +172,7 @@ function removeLine() {
   );
   let rowToRemove = "";
   for (let i = 0; i < selectCheckbox.length; i++) {
-    rowToRemove = selectCheckbox[i].parentNode.parentNode.parentNode;
+    rowToRemove = selectCheckbox[i].closest("tr");
     rowToRemove.parentNode.removeChild(rowToRemove);
   }
 }
@@ -183,15 +182,12 @@ document.addEventListener(
   function (event) {
     if (event.target.tagName === "button" || event.target.tagName === "img") {
       removeThisLine(event);
-    }
-
-    else if (event.target.type === "checkbox") {
+    } else if (event.target.type === "checkbox") {
       actionSelectCheckbox(event);
     }
   },
   true
 );
-
 
 function display(event) {
   const model = event.target.innerHTML;

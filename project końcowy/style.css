@@ -131,7 +131,9 @@ table {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-
+  background-color: cyan;
+  
+  opacity: 0.5;
   width: 60%;
 }
 #removeSelectedLine {
