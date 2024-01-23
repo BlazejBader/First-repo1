@@ -124,6 +124,33 @@ function createTable() {
   return tabela;
 }
 
+function createNavTable() {
+  const buttonArrowLeft = document.createElement("button");
+  buttonArrowLeft.innerHTML = "<";
+  displayNavTable.appendChild(buttonArrowLeft);
+  const serchSite = document.createElement("input");
+  serchSite.placeholder = 1;
+  serchSite.size = 1;
+  displayNavTable.appendChild(serchSite);
+  const buttonArrowRight = document.createElement("button");
+  buttonArrowRight.innerHTML = ">";
+  displayNavTable.appendChild(buttonArrowRight);
+  const selectPlace = document.getElementById("selectCountRow");
+
+  selectPlace.innerHTML = "";
+  const selectElement = document.createElement("select");
+  const option1 = document.createElement("option");
+  option1.value = 10;
+  option1.text = 10;
+  selectElement.appendChild(option1);
+  const option2 = document.createElement("option");
+  option2.value = 20;
+  option2.text = 20;
+  selectElement.appendChild(option2);
+  selectPlace.appendChild(selectElement);
+
+  return displayNavTable;
+}
 function actionSelectCheckbox(event) {
   const selectCheckbox = document.querySelectorAll(
     'input[type="checkbox"]:checked'
@@ -163,33 +190,6 @@ document.addEventListener(
   true
 );
 
-function createNavTable() {
-  const buttonArrowLeft = document.createElement("button");
-  buttonArrowLeft.innerHTML = "<";
-  displayNavTable.appendChild(buttonArrowLeft);
-  const serchSite = document.createElement("input");
-  serchSite.placeholder = 1;
-  serchSite.size = 1;
-  displayNavTable.appendChild(serchSite);
-  const buttonArrowRight = document.createElement("button");
-  buttonArrowRight.innerHTML = ">";
-  displayNavTable.appendChild(buttonArrowRight);
-  const selectPlace = document.getElementById("selectCountRow");
-
-  selectPlace.innerHTML = "";
-  const selectElement = document.createElement("select");
-  const option1 = document.createElement("option");
-  option1.value = 10;
-  option1.text = 10;
-  selectElement.appendChild(option1);
-  const option2 = document.createElement("option");
-  option2.value = 20;
-  option2.text = 20;
-  selectElement.appendChild(option2);
-  selectPlace.appendChild(selectElement);
-
-  return displayNavTable;
-}
 
 function display(event) {
   const model = event.target.innerHTML;

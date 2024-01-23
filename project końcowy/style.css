@@ -102,7 +102,9 @@ table {
 
 #wrapperNavTable {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
+
   width: 60%;
 }
 #removeSelectedLine {
