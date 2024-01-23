@@ -29,9 +29,29 @@ thead {
   display: flex;
   position: relative;
   justify-content: center;
-  align-items: center;
-  max-width: 60%vw;
+  max-width: 60%;
 }
+#mainWrapperSerchPlace{
+  display: flex;
+  justify-content: center;
+  
+}
+#wrapperSerchPlace{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+  max-width: 60%;
+}
+span> button> img{
+  width: 15px;
+  height: 15px;
+}
+.serchPlace{
+  display: flex;
+  align-items: center;
+}
+
 #secondTable {
   max-width: 100%;
 }
@@ -97,9 +117,10 @@ table {
   flex-direction: column;
   gap: 20px;
 }
-#wrapperLastSection {
+.wrapper {
   display: flex;
   justify-content: center;
+  
 }
 
 #wrapperNavTable {
