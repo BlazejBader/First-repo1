@@ -4,7 +4,10 @@ const buttons = document.getElementById("buttons");
 const displayTable = document.getElementById("wievTable");
 let tabela = "";
 let rowBody = "";
-
+const serchIndex = document.getElementById("findNumber");
+const findNameOrTitle = document.getElementById('findNameOrtitle')
+const findSearchIndex = document.getElementById('findSearchIndex')
+findSearchIndex.addEventListener('click',actionFindSearchIndex)
 const wrapperNavTable = document.getElementById("wrapperNavTable");
 const displayNavTable = document.getElementById("navTable");
 const keys = Object.keys(data);
@@ -83,7 +86,7 @@ function createTable() {
     const contentFirstCellBody = document.createTextNode(i + 1);
     firstCellBody.appendChild(contentFirstCellBody);
     rowBody.appendChild(firstCellBody);
-    
+
     Object.values(currentModel[i]).forEach((value, index) => {
       if (index < 3) {
         const cellBody = document.createElement("td");
@@ -119,8 +122,7 @@ function createTable() {
     buttonActionBox.addEventListener("click", removeThisLine);
 
     tabela.appendChild(tableBody);
-    
-    
+
     tableBody.appendChild(rowBody);
   }
 
@@ -178,6 +180,13 @@ function removeLine() {
     rowToRemove.parentNode.removeChild(rowToRemove);
   }
 }
+function actionSearchNameOrTitle(){
+
+}
+function actionFindSearchIndex(){
+  let indexToShow= serchIndex.value;
+
+}
 
 document.addEventListener(
   "click",
@@ -190,6 +199,14 @@ document.addEventListener(
   },
   true
 );
+function actionSearchIndex(){
+  serchIndex.placeholder = ` 1- ${currentModel.length}`;
+  serchIndex.min=1;
+  serchIndex.max=currentModel.length;
+ if (serchIndex.value>currentModel.length ){
+  console.log(`podana liczba jest poza zakresem` )
+ }
+}
 
 function display(event) {
   const model = event.target.innerHTML;
@@ -202,14 +219,13 @@ function display(event) {
   displayTable.appendChild(createTable());
   displayNavTable.innerHTML = "";
   wrapperNavTable.appendChild(createNavTable());
-   const serchIndex = document.getElementById("serchIndex");
-serchIndex.placeholder=`1-${currentModel.length}`;
-  }
-  keys.forEach((key) => {
-    const button = document.createElement("button");
-    button.className = "mainButton";
-    button.addEventListener("click", display);
-    button.innerHTML = key;
-    buttons.appendChild(button);
-  });
-  
+  actionSearchIndex()
+  actionSearchNameOrTitle()
+}
+keys.forEach((key) => {
+  const button = document.createElement("button");
+  button.className = "mainButton";
+  button.addEventListener("click", display);
+  button.innerHTML = key;
+  buttons.appendChild(button);
+});
